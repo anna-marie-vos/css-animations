@@ -1,3 +1,14 @@
-p {
-  color: red;
+circle {
+  animation-name: moving;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+@keyframes moving {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(1290px);
+  }
 }
