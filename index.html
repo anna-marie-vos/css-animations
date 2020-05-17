@@ -20,8 +20,12 @@
   </head>
 
   <body>
+    <div class="header">
+      <button onclick="clicked1('straight-line')">Straight line</button>
+      <button onclick="clicked1('bounce')">Bounce</button>
+    </div>
     <div class="main-container">
-      <svg x="0" y="0" id="main" viewbox="0 0 1400 900">
+      <svg x="0" y="0" class="main" id="straight-line" viewbox="0 0 1400 900" >
         <line x1="0" y1="455" x2="1400" y2="455" stroke="black" stroke-width="5" />
         <g id="circle">
           <circle cx="55" cy="400" r="50" stroke="green" stroke-width="5" fill="yellow" />
@@ -35,6 +39,10 @@
         <line x1="0" y1="0" x2="0" y2="900" stroke="crimson" stroke-width="5" />
         <line x1="1400" y1="0" x2="1400" y2="900" stroke="crimson" stroke-width="5" />
         <line x1="0" y1="900" x2="1400" y2="900" stroke="crimson" stroke-width="5" />
+      </svg>
+
+      <svg x="0" y="0" class="main" id="bounce" viewbox="0 0 1400 900" >
+
       </svg>
     </div>
   </body>
