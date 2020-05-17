@@ -15,20 +15,34 @@
     <!-- <link rel="stylesheet" href="assets/Skeleton-2.0.4/css/skeleton.css"> -->
     <!-- jQuery -->
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
     <!-- js -->
   </head>
 
   <body>
+    <div class="header">
+      <button onclick="clicked1('straight-line')">Straight line</button>
+      <button onclick="clicked1('bounce')">Bounce</button>
+    </div>
     <div class="main-container">
-      <svg x="0" y="0" id="main" viewbox="0 0 1400 900">
+      <svg x="0" y="0" class="main" id="straight-line" viewbox="0 0 1400 900" >
         <line x1="0" y1="455" x2="1400" y2="455" stroke="black" stroke-width="5" />
-        <circle cx="55" cy="400" r="50" stroke="green" stroke-width="5" fill="yellow" />
-
+        <g id="circle">
+          <circle cx="55" cy="400" r="50" stroke="green" stroke-width="5" fill="yellow" />
+          <g id="spokes">
+            <line x1="7" y1="400" x2="102" y2="400" stroke="green" stroke-width="2" />
+            <line x1="55" y1="350" x2="55" y2="450" stroke="green" stroke-width="2" />
+          </g>
+        </g>
         <!-- outline -->
         <line x1="0" y1="0" x2="1400" y2="0" stroke="crimson" stroke-width="5" />
         <line x1="0" y1="0" x2="0" y2="900" stroke="crimson" stroke-width="5" />
         <line x1="1400" y1="0" x2="1400" y2="900" stroke="crimson" stroke-width="5" />
         <line x1="0" y1="900" x2="1400" y2="900" stroke="crimson" stroke-width="5" />
+      </svg>
+
+      <svg x="0" y="0" class="main" id="bounce" viewbox="0 0 1400 900" >
+
       </svg>
     </div>
   </body>
