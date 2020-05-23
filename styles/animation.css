@@ -1,31 +1,113 @@
 .move-circle-left-to-right {
   transform-origin: 55px 400px;
   animation-name: move-circle-left-to-right;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
 }
 @keyframes move-circle-left-to-right {
   from {
-    transform: translate(0) rotate(0deg);
+    transform: translate(0);
   }
   to {
-    transform: translate(1290px) rotate(720deg);
+    transform: translate(1290px);
   }
 }
 
-/* .rotate-spokes { 
-  animation-name: rotate-spokes;
-  animation-duration: 3s;
+.bounce-ball {
+  /* transform-origin: 55px 400px; */
+  animation-name: bounce-ball; /* calls the keyframe function called bounce-ball */
+  animation-duration: 1s;
+  animation-iteration-count: 4;
   animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
 }
 
-@keyframes rotate-spokes {
-  from {
+@keyframes bounce-ball { 
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-100px);
+  }
+  33%, 66% {
+    transform: translateY(-190px);
+  }
+  50% {
+    transform: translateY(-200px);
+  }
+  90% {
+    transform: translateY(-80px);
+  }
+}
+
+.rotate-ball {
+  transform-origin: 55px 400px;
+  animation-name: rotate-ball;
+  animation-duration: 1s;
+  animation-iteration-count: 4;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate-ball { 
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(720deg);
+  100% {
+    transform: rotate(450deg);
+  }
+}
+
+
+/* .container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+} */
+
+/* .move {
+  animation: move 3s linear infinite;
+  animation-fill-mode: backwards;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX (0px);
+  }
+  100%{
+    transform: translateX(600px);
+  }
+} */
+
+/* .bounce {
+  border: solid red;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: bounce 1s linear infinite;
+} */
+
+/* @keyframes bounce {
+  0%, 100% {
+    transform-origin: bottom;
+    transform: translateY(0px) scaleY(0.5) ;
+  }
+  5%, 95% {
+    transform-origin: bottom;
+    transform: translateY(0px) scaleY(0.8) ;
+  }
+  10% {
+    transform: translateY(-100px);
+  }
+  33%, 66% {
+    transform: translateY(-190px);
+  }
+  50% {
+    transform: translateY(-200px);
+  }
+  90% {
+    transform: translateY(-80px);
   }
 } */

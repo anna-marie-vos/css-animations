@@ -21,17 +21,22 @@
 
   <body>
     <div class="header">
-      <button onclick="clicked1('straight-line')">Straight line</button>
-      <button onclick="clicked1('bounce')">Bounce</button>
+      <button id="straight-line" class="selected">Straight line</button>
+      <button id="bounce-ball">Bounce</button>
+      <!-- <button id="pause">Pause</button> -->
     </div>
     <div class="main-container">
-      <svg x="0" y="0" class="main" id="straight-line" viewbox="0 0 1400 900" >
+      <svg x="0" y="0" class="main" viewbox="0 0 1400 900" >
         <line x1="0" y1="455" x2="1400" y2="455" stroke="black" stroke-width="5" />
-        <g id="circle">
-          <circle cx="55" cy="400" r="50" stroke="green" stroke-width="5" fill="yellow" />
-          <g id="spokes">
-            <line x1="7" y1="400" x2="102" y2="400" stroke="green" stroke-width="2" />
-            <line x1="55" y1="350" x2="55" y2="450" stroke="green" stroke-width="2" />
+        <g id="ball">  
+          <g id="bounce">
+            <g id="rotate">
+              <circle cx="55" cy="400" r="50" stroke="green" stroke-width="5" fill="yellow" />
+              <g id="spokes">
+                <line x1="7" y1="400" x2="102" y2="400" stroke="green" stroke-width="2" />
+                <line x1="55" y1="350" x2="55" y2="450" stroke="green" stroke-width="2" />
+              </g>
+            </g>          
           </g>
         </g>
         <!-- outline -->
@@ -41,10 +46,14 @@
         <line x1="0" y1="900" x2="1400" y2="900" stroke="crimson" stroke-width="5" />
       </svg>
 
-      <svg x="0" y="0" class="main" id="bounce" viewbox="0 0 1400 900" >
-
-      </svg>
     </div>
   </body>
 
 </html>
+
+<!-- <div class="container">
+  <div class="move">
+    <div class="bounce"></div>  
+    <div class="shadow"></div>
+  </div>
+</div> -->
